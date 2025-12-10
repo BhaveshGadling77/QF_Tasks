@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
-// https://vite.dev/config/
+import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
+  publicDir: 'public',
+  // Add this if you want to keep files in src/assets
+  assetsInclude: ['**/*.csv'],
 })
